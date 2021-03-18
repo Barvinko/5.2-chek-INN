@@ -37,15 +37,16 @@ function check() {
                 console.log('Man');
                 INN.sex = "male";
             }
-            
+
             let days = +inn.slice(0,5);
             date.setDate(date.getDate() + days);
-            let today = new Date();
-            INN.dateOfBirth = date.getFullYear() + '-' + date.getMonth() + '-' + date.getDay();
 
+            let today = new Date();
+            INN.dateOfBirth = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+            
             INN.fullYears = today.getFullYear() - date.getFullYear();
             console.log(INN.fullYears);
-            if (today.getMonth() < date.getMonth() || today.getMonth() == date.getMonth() && today.getDay() < date.getDay()) {
+            if (today.getMonth() < date.getMonth() || today.getMonth() == date.getMonth() && today.getDate() < date.getDate()) {
                 --INN.fullYears;
             }
         }else{
