@@ -1,0 +1,12 @@
+main{
+    display: inline-block;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.788);
+    padding: 20px;
+}
+
+.feedback{
+    width: 300px;
+    text-align: left;
+    margin: auto;
+}
